@@ -1,0 +1,13 @@
+syntax = "proto3";
+package protobuf;
+
+option go_package = "/model";
+
+message SomeValue {
+
+  oneof someField {
+    string str = 10;
+    int32  i32 = 12;
+  }
+
+}
