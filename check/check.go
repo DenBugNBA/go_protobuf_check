@@ -15,6 +15,11 @@ func main() {
 
 	name := "Jack"
 
+	// optional fields
 	personOptional := model.PersonOptional{Name: &name}
 	fmt.Println(personOptional.GetId()) //0
+
+	// oneof
+	some := model.SomeValue{SomeField: &model.SomeValue_Str{Str: "hello"}}
+	fmt.Println(some.GetStr()) // hello
 }
